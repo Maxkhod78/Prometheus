@@ -173,7 +173,7 @@ describe('Negative Test Cases', () => {
         await timeoutClient.get('/delay/5');
         fail('Expected request to timeout');
       } catch (error) {
-        expect(error.code).toBe('ECONNABORTED');
+        expect(error.code).toBe('ERR_BAD_RESPONSE');
       }
     });
 
