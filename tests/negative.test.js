@@ -186,7 +186,7 @@ describe('Negative Test Cases', () => {
         await invalidClient.get('/posts');
         fail('Expected request to fail with invalid domain');
       } catch (error) {
-        expect(error.code).toBe('ENOTFOUND');
+        expect(error.message).toMatch(/ENOTFOUND/);
       }
     });
 
